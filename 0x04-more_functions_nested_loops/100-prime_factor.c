@@ -4,7 +4,7 @@
  * 612852475143
  * Return: 0
  */
-int main(void);
+int main(void)
 {
 long num = 612852475143;
 long divisor = 2;

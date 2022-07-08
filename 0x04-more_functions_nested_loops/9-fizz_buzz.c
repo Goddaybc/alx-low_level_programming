@@ -3,7 +3,7 @@
  * main - program that prints the numbers from 1 to 100
  * But for multiple of three  print Fizz
  * And for multiples of five print Buzz
- * Return: 0
+ * Return: Always 0
  */
 int main(void)
 {

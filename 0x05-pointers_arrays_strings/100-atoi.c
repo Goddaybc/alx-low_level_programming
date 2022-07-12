@@ -1,41 +1,48 @@
 #include "main.h"
+#include <limits.h>
 /**
  * _atoi - convert a string to an integer
- * @s: string to be converted
- * Return: integers in a string
+ * @s: the string to convert
+ *
+ * Return: result of conversion
  */
 int _atoi(char *s)
 {
-int num, len, numcount, mult, x, neg;
-len = 0;
-x = 0;
-numcount = 0;
-mult = 1;
-neg = 1;
-num = 0;
-while (s[len] != '\0')
+unsigned int n = 0;
+int sign = 1;
+int flag = 0;
+while (*s)
 {
-if (s[len] >= '0' && s[len] <= '9')
+if (*s >= '0' && *s <= '9')
 {
-numcount++;
-if (!(s[len + 1] >= '0' && s[len + 1] <= '9'))
+flag = 1;
+if (sign > 0)
+{
+if (INT_MAX / 10 < (int) n)
+return (INT_MAX);
+n *= 10;
+if (INT_MAX - (*s - '0') < (int) n)
+return (INT_MAX);
+}
+else
+{
+if (INT_MIN / 10 > (int) -n)
+return (INT_MIN);
+n *= 10;
+if (INT_MIN + (*s - '0') > (int) -n)
+return (INT_MIN);
+}
+n += (*s - '0');
+}
+else if (flag)
+{
 break;
 }
-len++;
-}
-for (; numcount > 1; numcount--)
+else if (*s == '-')
 {
-mult *= 10;
+sign *= -1;
 }
-for (; x <= len; x++)
-{
-if (s[x] == '-')
-neg *= -1;
-else if (s[x] <= '9' && s[x] >= '0')
-{
-num += (s[x] - '0') * foo * bar;
-mult /= 10;
+++s;
 }
-}
-return (num);
+return (n *sign);
 }

@@ -2,8 +2,8 @@
 #include <stdio.h>
 /**
  * print_buffer - Prints buffer 10 bytes at a time, starting with
- * the byte position, then showing the hex contents
- * then displaying printable characters
+ *                       the byte position showing the hex content
+ *                       then displaying printable characters
  * @b: the buffer to be printed.
  * @size: the number of bytes to be printed from the buffer
  */

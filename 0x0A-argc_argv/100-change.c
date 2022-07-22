@@ -17,7 +17,7 @@ i++;
 return (1);
 }
 /**
- * main - add positive numbers
+ * main - adds positive numbers
  * @argc: int
  * @argv: list
  * Return: 0

@@ -7,7 +7,7 @@
  * Return: if str == NULL or insufficient memory is available - NULL
  * otherwise - a pointer to the duplicated string.
  */
-char *_strdup(chat *str)
+char *_strdup(char *str)
 {
 char *duplicate;
 int index, len = 0;

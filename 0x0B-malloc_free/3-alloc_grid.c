@@ -1,4 +1,6 @@
 #include "main.h"
+#include <stdlib.h>
+#include <stdio.h>
 
 /**
  * alloc_grid - create a 2-dimensional array with each element set to 0

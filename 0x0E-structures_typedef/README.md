@@ -1,1 +1,1 @@
-it is for struct
+itis for typedef

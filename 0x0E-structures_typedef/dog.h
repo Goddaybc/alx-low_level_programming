@@ -1,20 +1,25 @@
-#ifndef FILE_DOG
-#define FILE_DOG
+#ifndef STRUCT_FILE
+#define STRUCT_FILE
+
 /**
- * struct dog - struct dog
- * @name: attribute pointer to a char names dog
- * @age: attributes float age's dog
- * @owner: attribute pointer to char owners dog
+ * struct dog - Structure for dog
+ * @name: Name of dog
+ * @age: Dog's age
+ * @owner: Owner's name
  */
+
 struct dog
 {
-char *name;
-float age;
-char *owner;
+	char *name;
+	float age;
+	char *owner;
 };
+
 typedef struct dog dog_t;
-void init_dog(struct dog *d, char *name, floatage, char *owner);
+
+void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
 dog_t *new_dog(char *name, float age, char *owner);
 void free_dog(dog_t *d);
+
 #endif

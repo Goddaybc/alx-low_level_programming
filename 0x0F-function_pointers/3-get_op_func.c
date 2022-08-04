@@ -19,9 +19,9 @@ op_t ops[] = {
 int i = 0;
 while (i < 5)
 {
-if (strcmp(s, op[i].op) == 0)
+if (*(ops[i]).op == *s && *(s + 1) == '\0')
 return (ops[i].f);
 i++;
 }
-return (0);
+return (NULL);
 }
